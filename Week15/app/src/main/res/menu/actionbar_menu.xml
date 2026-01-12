@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/call"
+        android:icon="@android:drawable/ic_menu_call"
+        android:title="call"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/star"
+        android:icon="@android:drawable/btn_star_big_on"
+        android:title="star"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/speak"
+        android:icon="@android:drawable/ic_btn_speak_now"
+        android:title="speak"
+        app:showAsAction="never" />
+</menu>

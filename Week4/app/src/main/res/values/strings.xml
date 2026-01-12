@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">A108222040_ImageStringAutoSearch</string>
+    <string-array name="PlaceArray">
+        <item>Taipei</item>
+        <item>Taipei government</item>
+        <item>Taipei 101</item>
+        <item>Taipei MRT</item>
+        <item>Taipei railway</item>
+        <item>Taiwan High Speed Rail</item>
+        <item>Kaohsiung government</item>
+        <item>Kaohsiung MRT</item>
+        <item>Kaohsiung Wei Wu In</item>
+        <item>楊睿謙</item>
+        <item>楊楊</item>
+    </string-array>
+</resources>

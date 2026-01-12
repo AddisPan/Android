@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="product_value">
+        <item>全部商品</item>
+        <item>咖啡</item>
+        <item>拿鐵</item>
+    </string-array>
+
+    <string-array name="temp4list_value">
+        <item>不限溫度</item>
+        <item>熱</item>
+        <item>冰</item>
+    </string-array>
+
+    <string-array name="temp4order_value">
+        <item>熱</item>
+        <item>正常</item>
+        <item>少冰</item>
+        <item>微冰</item>
+        <item>去冰</item>
+    </string-array>
+
+    <string-array name="sweet_value">
+        <item>全糖</item>
+        <item>少糖</item>
+        <item>半糖</item>
+        <item>微糖</item>
+        <item>無糖</item>
+    </string-array>
+
+    <string-array name="quantity_value">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="product4combine_value">
+        <item>黑咖啡</item>
+        <item>拿鐵</item>
+    </string-array>
+
+    <string-array name="discount_value">
+        <item>尚未使用</item>
+        <item>80%折價券</item>
+    </string-array>
+
+    <string-array name="time_value">
+        <item>春季早上</item>
+        <item>春季下午</item>
+        <item>春季晚上</item>
+        <item>夏季早上</item>
+        <item>夏季下午</item>
+        <item>夏季晚上</item>
+        <item>秋季早上</item>
+        <item>秋季下午</item>
+        <item>秋季晚上</item>
+        <item>冬季早上</item>
+        <item>冬季下午</item>
+        <item>冬季晚上</item>
+    </string-array>
+</resources>

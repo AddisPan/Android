@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.iot_cbw_coffeemachine">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.LOCAL_MAC_ADDRESS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.IOT_CBW_CoffeeMachine"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activity_introduction"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/StatusTheme" />
+        <activity
+            android:name=".SignUp"
+            android:exported="false"
+            android:theme="@style/StatusTheme" />
+        <activity
+            android:name=".activity_recorddetail"
+            android:exported="false"
+            android:parentActivityName=".Activity_record"
+            android:theme="@style/StatusTheme" />
+        <activity
+            android:name=".Activity_shopdetail"
+            android:exported="false"
+            android:noHistory="true"
+            android:theme="@style/StatusTheme" />
+        <activity
+            android:name=".BasicInformation"
+            android:exported="false"
+            android:theme="@style/StatusTheme" />
+        <activity
+            android:name=".activity_combination_list"
+            android:exported="false"
+            android:theme="@style/StatusTheme" >
+        </activity>
+        <activity
+            android:name=".Activity_combination"
+            android:exported="false"
+            android:theme="@style/StatusTheme" >
+        </activity>
+        <activity
+            android:name=".Activity_record"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/StatusTheme" />
+        <activity
+            android:name=".Activity_personal"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/StatusTheme" />
+        <activity
+            android:name=".activity_for_test"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false"
+            android:theme="@style/StatusTheme" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:noHistory="true"
+            android:theme="@style/StatusTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="iotcoffee.com"
+                    android:pathPrefix="/search"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+    </application>
+
+</manifest>

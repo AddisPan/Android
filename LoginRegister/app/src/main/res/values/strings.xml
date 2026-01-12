@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">LoginRegister</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">login</string>
+    <string name="email">email</string>
+    <string name="fullname">Fullname</string>
+    <string name="loginhere">Already have an account? <u>Login</u></string>
+    <string name="signup">Signup</string>
+    <string name="signuphere">Create a newaccount? SignUp</string>
+</resources>

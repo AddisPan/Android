@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">A108222040_ListView</string>
+    <string-array name="s1">
+        <item>金馬前哨站表現亮眼！世新校友、在校生9作品強勢入圍金穗獎</item>
+        <item>世新大學力壓群雄！43學制評鑑全數通過 獲6年效期</item>
+        <item>「消息一到手，真相便擁有？」 新。聞之間邁入全新第三季</item>
+    </string-array>
+</resources>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_personal">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#b3a995"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ToolbarTheme">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="個人資料"
+                android:textColor="#f5f5f5"
+                android:textSize="35dp"
+                android:textStyle="bold"/>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBarLayout"
+        android:background="#F6F6F6">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="670dp"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/bg_list"
+            android:padding="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_personal"
+                android:layout_width="110dp"
+                android:layout_height="93dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="145dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="145dp"
+                android:src="@drawable/person"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp" />
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="140dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_edittext"
+                android:gravity="center"
+                android:hint="your name"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:theme="@style/EditTextThemeOverlay" />
+
+            <!--            <View-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="5dp"-->
+            <!--                android:layout_below="@+id/et_name"-->
+            <!--                android:layout_marginTop="-11dp"-->
+            <!--                android:background="@color/gray" />-->
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="110dp"
+                android:background="@drawable/bg_personal"
+                android:gravity="center_horizontal"
+                android:text="姓名"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:textStyle="bold"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/et_name"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="55dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/bg_edittext"
+                android:gravity="center"
+                android:hint="nick name"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold"/>
+
+            <!--            <View-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="5dp"-->
+            <!--                android:layout_below="@+id/et_nickname"-->
+            <!--                android:layout_marginTop="-11dp"-->
+            <!--                android:background="@color/gray" />-->
+
+            <TextView
+                android:id="@+id/tv_nickname"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/et_name"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_personal"
+                android:gravity="center_horizontal"
+                android:text="暱稱"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:textStyle="bold"/>
+            <!--                android:layout_below="@+id/et_name"-->
+            <RadioGroup
+                android:id="@+id/rg_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_nickname"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="55dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/bg_edittext"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:buttonTint="@color/check_color"
+                    android:text="男"
+                    android:textSize="30dp"
+                    android:textStyle="bold"/>
+
+                <RadioButton
+                    android:id="@+id/rb_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:buttonTint="@color/check_color"
+                    android:text="女"
+                    android:textSize="30dp"
+                    android:textStyle="bold"/>
+            </RadioGroup>
+
+            <!--            <View-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="5dp"-->
+            <!--                android:layout_below="@+id/rg_gender"-->
+            <!--                android:layout_marginTop="0dp"-->
+            <!--                android:background="@color/gray" />-->
+
+            <TextView
+                android:id="@+id/tv_gender"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/et_nickname"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_personal"
+                android:gravity="center_horizontal"
+                android:text="性別"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rg_gender"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/bg_edittext"
+                android:gravity="center"
+                android:text="尚未選擇生日"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                android:textStyle="bold"/>
+
+            <!--            <View-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="5dp"-->
+            <!--                android:layout_below="@+id/tv_date"-->
+            <!--                android:layout_marginTop="0dp"-->
+            <!--                android:background="@color/gray" />-->
+
+            <TextView
+                android:id="@+id/tv_birth"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rg_gender"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_personal"
+                android:gravity="center_horizontal"
+                android:text="生日"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/tv_date"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/bg_edittext">
+
+                <CheckBox
+                    android:id="@+id/cb_milk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:buttonTint="@color/check_color"
+                    android:text="牛奶"
+                    android:textSize="30dp"
+                    android:textStyle="bold"/>
+
+                <CheckBox
+                    android:id="@+id/cb_sugar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_allergen"
+                    android:layout_marginLeft="30dp"
+                    android:layout_toRightOf="@+id/cb_milk"
+                    android:buttonTint="@color/check_color"
+                    android:text="糖"
+                    android:textSize="30dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_allergen"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/tv_date"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_personal"
+                android:gravity="center_horizontal"
+                android:text="過敏原"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

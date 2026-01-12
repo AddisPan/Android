@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F6F6"
+    android:orientation="vertical"
+    tools:context=".Fragment_order">
+    <!--    F6F6F6-->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/mtoolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#B3A995"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="訂購商品"
+                android:textColor="#F5F5F5"
+                android:textSize="35dp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="705dp"
+        android:layout_below="@+id/appBarLayout">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--<ExpandableListView
+                android:id="@+id/favoriteListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" /> -->
+
+            <RelativeLayout
+                android:id="@+id/relativelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:layout_width="380dp"
+                    android:layout_height="400dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/bg_customer">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout_coffee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="55dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="飲料"
+                            android:textColor="@color/check_color"
+                            android:textSize="30dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_coffee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="55dp"
+                            android:text="尚未選擇飲品"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="108dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/black" />
+
+
+                    <TextView
+                        android:id="@+id/tv_temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/linearLayout_coffee"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginTop="30dp"
+                        android:text="溫度"
+                        android:textColor="@color/check_color"
+                        android:textSize="30dp"
+                        android:textStyle="bold" />
+
+                    <SeekBar
+                        android:id="@+id/seekbar_temp"
+                        style="@style/Widget.AppCompat.SeekBar.Discrete"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/linearLayout_coffee"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_toRightOf="@+id/tv_temp"
+                        android:max="4"
+                        android:progress="0"
+                        android:progressBackgroundTint="@color/black"
+                        android:progressTint="@color/black"
+                        android:thumbTint="@color/check_color" />
+
+                    <TextView
+                        android:id="@+id/tv_tempResult"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/linearLayout_coffee"
+                        android:layout_marginTop="35dp"
+                        android:layout_toRightOf="@+id/seekbar_temp"
+                        android:text="熱"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="178dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/black" />
+
+
+                    <TextView
+                        android:id="@+id/tv_sweet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_temp"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginTop="30dp"
+                        android:text="甜度"
+                        android:textColor="@color/check_color"
+                        android:textSize="30dp"
+                        android:textStyle="bold" />
+
+                    <SeekBar
+                        android:id="@+id/seekbar_sweet"
+                        style="@style/Widget.AppCompat.SeekBar.Discrete"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/seekbar_temp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="53dp"
+                        android:layout_toRightOf="@id/tv_sweet"
+                        android:max="10"
+                        android:progress="5"
+                        android:progressBackgroundTint="@color/black"
+                        android:progressTint="@color/black"
+                        android:thumbTint="@color/check_color" />
+
+                    <TextView
+                        android:id="@+id/tv_sweetResult"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/seekbar_temp"
+                        android:layout_marginTop="50dp"
+                        android:layout_toRightOf="@+id/seekbar_sweet"
+                        android:text="五分糖"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="248dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/black" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="265dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="數量"
+                            android:textColor="@color/check_color"
+                            android:textSize="30dp"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/spinner_quantity"
+                            android:layout_width="135dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="55dp"
+                            android:entries="@array/quantity_value" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="318dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/black" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="60dp"
+                    android:src="@drawable/bg_rectangle" />
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="77dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@color/black" />
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="88dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@color/black" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="60dp"
+                    android:src="@drawable/bg_rectangle" />
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="187dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@color/black" />
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="198dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@color/black" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="275dp"
+                    android:layout_marginTop="60dp"
+                    android:src="@drawable/bg_rectangle" />
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="292dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@color/black" />
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="42dp"
+                    android:layout_marginLeft="303dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@color/black" />
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="325dp"
+                    android:layout_marginTop="380dp"
+                    android:src="@drawable/logo_black" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="180dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:backgroundTint="#ABA8A1"
+                android:text="加至購物車"
+                android:textColor="#f5f5f5"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/check_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="-20dp"
+                android:background="#F6F6F6"
+                android:text=" 購物車 "
+                android:textColor="@color/check_color"
+                android:textSize="30dp"
+                android:textStyle="bold"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rev_shoppingCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"/>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/bg_shoppingcar">
+
+                <LinearLayout
+                    android:id="@+id/ll_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="15dp"
+                        android:text="使用優惠卷"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"
+                        android:textStyle="bold"/>
+
+                    <Spinner
+                        android:id="@+id/spinner_discount"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="90dp"
+                        android:layout_marginTop="10dp"
+                        android:entries="@array/discount_value"
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_layout"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:text="總價"
+                    android:textColor="#000000"
+                    android:textSize="25dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_layout"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="40dp"
+                    android:text="0元"
+                    android:textColor="#000000"
+                    android:textSize="25dp"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="150dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#ABA8A1"
+                android:text="確定送出"
+                android:textColor="#f5f5f5"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

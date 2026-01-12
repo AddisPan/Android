@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="StatusTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Defining that new color in ColorPrimaryDark -->
+        <item name="colorPrimaryDark">#b3a995</item>
+        <item name="colorAccent">@color/check_color</item>
+        <item name="fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="MyHintStyle" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/main_color</item>
+    </style>
+
+    <style name="EditTextThemeOverlay" parent="ThemeOverlay.AppCompat">
+        <item name="colorAccent">@color/check_color</item>
+    </style>
+
+    <style name="EditTextTheme" parent="ThemeOverlay.AppCompat">
+        <item name="android:background">@drawable/bg_edittext</item>
+        <item name="colorControlNormal">#918c7a</item>
+        <item name="colorControlActivated">@color/check_color</item>
+    </style>
+</resources>

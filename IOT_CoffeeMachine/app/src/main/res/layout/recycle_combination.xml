@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chauthai.swipereveallayout.SwipeRevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeRevealLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:mode="same_level"
+    app:dragEdge="right">
+
+    <!-- Your secondary layout here -->
+    <LinearLayout
+        android:id="@+id/layout_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:background="#dfdcd2"
+            android:src="@drawable/ic_garbage" />
+    </LinearLayout>
+
+    <!-- Your main layout here -->
+    <RelativeLayout
+        android:id="@+id/mainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:clickable="true"
+        android:background="@drawable/bg_list">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="25dp"
+                android:background="@color/gray" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="組合名稱"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="350dp"
+                android:layout_height="5dp"
+                android:layout_below="@+id/name"
+                android:layout_marginTop="0dp"
+                android:background="@color/gray" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="85dp"
+            android:src="@drawable/coffee" />
+
+        <TextView
+            android:id="@+id/coffee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="85dp"
+            android:layout_marginTop="85dp"
+            android:text="飲料"
+            android:textSize="25dp"
+            android:textColor="@color/check_color"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/iv_temp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/coffee"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_temp_0" />
+
+        <TextView
+            android:id="@+id/temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/coffee"
+            android:layout_marginLeft="88dp"
+            android:layout_marginTop="13dp"
+            android:text="溫度"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/iv_sweet"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_below="@+id/coffee"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="9dp"
+            android:src="@drawable/ic_sweet_1" />
+
+        <TextView
+            android:id="@+id/sweet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/coffee"
+            android:layout_marginLeft="105dp"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@+id/iv_temp"
+            android:text="甜度"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+</com.chauthai.swipereveallayout.SwipeRevealLayout>
