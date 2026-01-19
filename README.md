@@ -1,45 +1,39 @@
 # 🔍 Android Image & String AutoSearch Demo
 
-> **專案概述**：
->這是一個 Android 原生開發的技術展示專案 (Technical Demo)，重點實作 **即時搜尋建議 (Auto Complete)** 與 **動態 UI 控制**。
->
->本專案模擬了商業 App 常見的搜尋邏輯，並採用標準的 **MVC 架構** 與 **Adapter Pattern**，確保資料與介面的解耦。
+## 📌 專案概述 (Overview)
+
+這是一個 **Android 原生開發 (Native Android)** 的技術展示專案（Technical Demo），  
+重點實作 **即時搜尋建議（Auto Complete）** 與 **動態 UI 控制**。
+
+本專案模擬商業 App（如：股市查詢、商品檢索）中常見的搜尋邏輯，  
+並透過 **Adapter Pattern** 確保資料層與 UI 層解耦，  
+用以展示對 Android 基礎元件與架構概念的掌握程度。
 
 ---
 
-## 📱 功能演示 (Features)
+## 📸 功能演示 (Screenshots)
 
-### 1. 智慧搜尋 (Smart Auto-Complete)
-* **即時篩選**：使用者輸入關鍵字（如 "Taipei"）時，系統利用 `TextWatcher` 機制即時比對資料庫，並列出候選結果。
-* **客製化列表**：搜尋結果的下拉選單經過 UI 客製化（背景色、字體），非 Android 預設樣式。
-
-### 2. 圖片瀏覽與特效 (Image Viewer)
-* **多媒體控制**：實作圖片的「上一張/下一張」切換邏輯。
-* **透明度調整**：透過 `SeekBar` 動態調整圖片的 Alpha 值 (0-100%)，展示對 View 屬性的即時操作能力。
-
----
-
-## 📸 執行截圖 (Screenshots)
-
-| 主畫面與圖片控制 | 搜尋功能演示 |
+| 主畫面與透明度控制 | 搜尋與自動完成 |
 |:---:|:---:|
-| *(請在此處放入你的主畫面截圖，例如 main_view.png)* | *(請在此處放入搜尋時跳出選單的截圖，例如 search_demo.png)* |
-| **圖 1：透明度調整與圖片切換** | **圖 2：輸入 'T' 即顯示相關候選字** |
+| <img src="demo1.png" width="300" alt="Main Activity Demo" /> | <img src="demo2.png" width="300" alt="Search Activity Demo" /> |
+| 透過 SeekBar 動態調整圖片 Alpha 值，<br>並實作圖片切換邏輯 | 輸入關鍵字（如 `T`）即時觸發<br>AutoCompleteTextView 篩選 |
+
+> ⚠️ 若圖片無法顯示，請確認圖片路徑是否正確，例如：  
+> `images/demo1.png`、`images/demo2.png`
 
 ---
 
-## 🛠 技術架構與程式碼亮點 (Technical Highlights)
+## 📱 核心功能 (Features)
 
-此專案重點展示了以下 Android 開發核心觀念：
+### 1️⃣ 智慧搜尋（Smart Auto-Complete）
 
-### 1. Adapter 模式應用 (Adapter Pattern)
-為了高效處理列表資料，我使用了 Android SDK 標準的 `ArrayAdapter` 搭配 `AutoCompleteTextView`。這體現了我對 Android 列表元件機制的理解。
+- **即時篩選邏輯**  
+  使用者輸入關鍵字時，透過 `AutoCompleteTextView` 內建機制即時比對資料來源。
 
-```java
-// 核心程式碼片段 (A108222040_AutoSearch.java)
-// 將資料源 (autoString) 透過 Adapter 轉換並綁定到 UI (listitem)
-String [] autoString = getResources().getStringArray(R.array.PlaceArray);
-ArrayAdapter<String> ap = new ArrayAdapter<>(this, R.layout.listitem, autoString);
+- **搜尋列表客製化**  
+  使用自訂 `listitem.xml` 來設計下拉選單的背景色、字體大小與文字顏色，  
+  避免使用原生預設樣式，提升 UI 可讀性。
 
-// 綁定 Adapter，實現自動篩選邏輯
-autov.setAdapter(ap);
+---
+
+### 2️⃣ 圖片瀏覽與特效（Ima
