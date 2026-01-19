@@ -1,4 +1,4 @@
-ch Demo
+# 🔍 Android Image & String AutoSearch Demo
 
 > **專案概述 (Overview)**
 > 
@@ -46,59 +46,59 @@ ArrayAdapter<String> ap = new ArrayAdapter<>(this, R.layout.listitem, autoString
 
 // 3. 綁定到 AutoCompleteTextView
 autov.setAdapter(ap);
-2. 關注點分離 (Separation of Concerns)
-為了模擬真實開發情境，我將「資料」與「邏輯」分離。搜尋的候選資料由 strings.xml 統一管理，而非寫死在 Java 邏輯中。
+```
 
-XML
+### 2. 關注點分離 (Separation of Concerns)
+為了模擬真實開發情境，我將「資料」與「邏輯」分離。搜尋的候選資料由 `strings.xml` 統一管理，而非寫死在 Java 邏輯中。
 
+```xml
 <string-array name="PlaceArray">
     <item>Taipei</item>
     <item>Taipei 101</item>
     <item>Kaohsiung MRT</item>
     <item>Taiwan High Speed Rail</item>
     </string-array>
-3. UI 元件客製化 (Custom View)
-為了提升使用者體驗，我建立了 listitem.xml 來定義搜尋結果的呈現方式，而非使用預設樣式。
+```
 
-XML
+### 3. UI 元件客製化 (Custom View)
+為了提升使用者體驗，我建立了 `listitem.xml` 來定義搜尋結果的呈現方式，而非使用預設樣式。
 
+```xml
 <TextView 
     android:background="#D8DF21" 
     android:textColor="@color/purple_500"
     android:textSize="18sp" ... />
-📂 專案結構說明 (Project Structure)
+```
+
+---
+
+## 📂 專案結構說明 (Project Structure)
+
 本專案遵循 MVC 分層概念進行管理：
 
-View (介面層)
+* **View (介面層)**
+    * `activity_main.xml`: 主功能入口，包含 ImageView 與 SeekBar。
+    * `activity_a108222040__auto_search.xml`: 搜尋功能專用頁面。
+    * `listitem.xml`: 定義搜尋下拉選單的 Item 樣式。
+* **Controller (邏輯層)**
+    * `MainActivity.java`: 負責 SeekBar 監聽 (`OnSeekBarChangeListener`)、圖片切換演算法與 `Intent` 頁面跳轉。
+    * `A108222040_AutoSearch.java`: 負責 `AutoCompleteTextView` 的初始化與 Adapter 資料綁定。
+* **Model (資料層)**
+    * `res/values/strings.xml`: 存放搜尋候選字串陣列 (`PlaceArray`)。
+    * `res/drawable/`: 存放圖片資源 (flow01b ~ flow06b)。
 
-activity_main.xml: 主功能入口，包含 ImageView 與 SeekBar。
+---
 
-activity_a108222040__auto_search.xml: 搜尋功能專用頁面。
+## 🚀 未來優化展望 (Future Roadmap)
 
-listitem.xml: 定義搜尋下拉選單的 Item 樣式。
-
-Controller (邏輯層)
-
-MainActivity.java: 負責 SeekBar 監聽 (OnSeekBarChangeListener)、圖片切換演算法與 Intent 頁面跳轉。
-
-A108222040_AutoSearch.java: 負責 AutoCompleteTextView 的初始化與 Adapter 資料綁定。
-
-Model (資料層)
-
-res/values/strings.xml: 存放搜尋候選字串陣列 (PlaceArray)。
-
-res/drawable/: 存放圖片資源 (flow01b ~ flow06b)。
-
-🚀 未來優化展望 (Future Roadmap)
 若將此功能擴展為正式上線產品，我計畫進行以下架構升級（這也是我目前持續精進的方向）：
 
-資料源動態化：將目前的 XML 靜態資料，改為透過 Retrofit 呼叫 RESTful API，實現雲端資料同步。
+1.  **資料源動態化**：將目前的 XML 靜態資料，改為透過 **Retrofit** 呼叫 RESTful API，實現雲端資料同步。
+2.  **效能優化**：在資料量龐大時，為搜尋監聽加入 **Debounce (防抖)** 機制，避免使用者輸入過快導致 API 請求過於頻繁。
+3.  **架構升級 (MVVM)**：引入 Android Jetpack 的 `ViewModel` 與 `LiveData`，解決螢幕旋轉導致的資料狀態重置問題。
 
-效能優化：在資料量龐大時，為搜尋監聽加入 Debounce (防抖) 機制，避免使用者輸入過快導致 API 請求過於頻繁。
+---
 
-架構升級 (MVVM)：引入 Android Jetpack 的 ViewModel 與 LiveData，解決螢幕旋轉導致的資料狀態重置問題。
-
-👤 Contact
-Developer: [您的名字]
-
-GitHub: [您的 GitHub 連結]
+### 👤 Contact
+* **Developer**: Yang (A108222040)
+* **GitHub**: [您的 GitHub 連結]
